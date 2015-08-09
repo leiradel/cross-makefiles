@@ -18,3 +18,5 @@ The list of host/target platforms supported are:
 Building for Android devices needs the [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html). Specify the path to the NDK by building with `NDK_ROOT_DIR=<path> make -f Makefile.android-<abi>`.
 
 Building for Windows from a Windows host needs the `mingw-64` package to be installed. Building for the Wii needs the [devkitPPC](http://wiibrew.org/wiki/DevkitPPC). Specify the path to it by building with `DEVKITPPC_ROOT_DIR=<path> make -f Makefile.android-wii`.
+
+For usage examples, see [81-libretro](https://github.com/libretro/81-libretro).
