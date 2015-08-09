@@ -23,4 +23,4 @@ Building for Windows from a Windows host needs the `mingw-64` package to be inst
 
 ## Usage
 
-For usage examples, see [81-libretro](https://github.com/libretro/81-libretro). Specifically, the make files should be saved in the `build` folder under the core root folder.
+For usage examples, see [81-libretro](https://github.com/libretro/81-libretro). Specifically, the makefiles should be saved in the `build` folder under the core root folder.
