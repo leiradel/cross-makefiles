@@ -3,12 +3,6 @@ local template = [[
 # Works on hosts ${HOST}
 # ${HEADERMSG}
 
-#############
-# User config
-
-DEBUG = 0
-LOG_PERFORMANCE = 1
-
 ##########################
 # Checks the host platform
 

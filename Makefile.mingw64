@@ -2,12 +2,6 @@
 # Works on hosts Windows
 # Install MSYS2
 
-#############
-# User config
-
-DEBUG = 0
-LOG_PERFORMANCE = 1
-
 ##########################
 # Checks the host platform
 

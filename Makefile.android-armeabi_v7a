@@ -2,12 +2,6 @@
 # Works on hosts Linux, Windows and Darwin
 # Download the Android NDK, unpack somewhere, and set NDK_ROOT_DIR to it
 
-#############
-# User config
-
-DEBUG = 0
-LOG_PERFORMANCE = 1
-
 ##########################
 # Checks the host platform
 
