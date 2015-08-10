@@ -12,7 +12,7 @@ The list of host/target platforms supported are:
 
 * `Makefile.android-*`: builds android binaries for each one of the [supported ABIs](https://developer.android.com/ndk/guides/abis.html) from Linux, Windows and OSX hosts. The host platform is auto-detected.
 * `Makefile.linux-*`: builds Linux binaries from a Linux host.
-* `Makefile.linux_portable-*`: builds Linux binaries from a Linux host. The difference from these makefiles to the `linux-*` ones is that the later use `-Wl,-no-undefined` when linking the shared object,
+* `Makefile.linux_portable-*`: builds Linux binaries from a Linux host. The difference from these makefiles to the `linux-*` ones is that the later use `-Wl,-no-undefined` when linking the shared object.
 * `Makefile.mingw*`: builds Windows binaries from a Windows host.
 * `Makefile.wii`: builds Wii binaries from Linux, Windows and OSX hosts.
 * `Makefile.windows-*`: builds Windows binaries from a Linux host.
