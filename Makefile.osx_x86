@@ -19,10 +19,10 @@ endif
 #################
 # Toolchain setup
 
-CC  = i386-apple-darwin13-cc
-CXX = i386-apple-darwin13-c++
-AS  = i386-apple-darwin13-as
-AR  = i386-apple-darwin13-ar
+CC  = $(OSXCROSS_ROOT_DIR)/target/bin/i386-apple-darwin13-cc
+CXX = $(OSXCROSS_ROOT_DIR)/target/bin/i386-apple-darwin13-c++
+AS  = $(OSXCROSS_ROOT_DIR)/target/bin/i386-apple-darwin13-as
+AR  = $(OSXCROSS_ROOT_DIR)/target/bin/i386-apple-darwin13-ar
 
 ############
 # Extensions
