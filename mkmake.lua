@@ -17,16 +17,6 @@ else ifneq ($(findstring win,$(shell uname -a)),)
   HOST_PLATFORM = windows
 endif
 
-
-####################################
-# Variable setup for Makefile.common
-
-CORE_DIR  ?= ..
-BUILD_DIR ?= .
-INCLUDES   = ${PLAT_INCDIR}
-
-include $(BUILD_DIR)/Makefile.common
-
 #################
 # Toolchain setup
 
@@ -85,6 +75,15 @@ ifneq ($(LOG_PERFORMANCE),)
   CFLAGS   += -DLOG_PERFORMANCE
   CXXFLAGS += -DLOG_PERFORMANCE
 endif
+
+####################################
+# Variable setup for Makefile.common
+
+CORE_DIR  ?= ..
+BUILD_DIR ?= .
+INCLUDES   = ${PLAT_INCDIR}
+
+include $(BUILD_DIR)/Makefile.common
 
 ###############
 # Include rules
@@ -421,9 +420,17 @@ for plat, defs in pairs( platforms ) do
     end
   until equal
   
-  local file, err = io.open( defs.MAKEFILE, 'wb' )
-  if not file then error( err ) end
-  
+  local file = assert( io.open( defs.MAKEFILE, 'wb' ) )
   file:write( templ )
   file:close()
 end
+
+local else_ = ''
+
+for plat, defs in pairs( platforms ) do
+  io.write( else_, 'ifeq ($(platform),', defs.EXT, ')\n' )
+  io.write( 'include $(BUILD_DIR)/Makefile.', defs.EXT, '\n' )
+  else_ = 'else '
+end
+
+io.write( 'else\n' )
