@@ -3,8 +3,8 @@ local template = [[
 # Works on hosts ${HOST}
 # ${HEADERMSG}
 
-##########################
-# Checks the host platform
+#########################
+# Check the host platform
 
 HOST_PLATFORM = linux
 ifeq ($(shell uname -a),)
@@ -16,6 +16,11 @@ else ifneq ($(findstring Darwin,$(shell uname -a)),)
 else ifneq ($(findstring win,$(shell uname -a)),)
   HOST_PLATFORM = windows
 endif
+
+#########################
+# Set the target platform
+
+TARGET_PLATFORM = ${TARGET_PLATFORM}
 
 #################
 # Toolchain setup
@@ -447,6 +452,7 @@ for plat, defs in pairs( platforms ) do
   local equal
 
   defs.STATIC_LINKING = defs.STATIC_LINKING or '0'
+  defs.TARGET_PLATFORM = defs.EXT
   
   repeat
     equal = true
