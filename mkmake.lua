@@ -445,6 +445,26 @@ local platforms = {
     PLAT_LDXFLAGS  = '${PLAT_LDFLAGS}',
     STATIC_LINKING = '1'
   },
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  vita = {
+    MAKEFILE       = 'Makefile.vita_arm',
+    HOST           = 'Linux',
+    HEADERMSG      = 'Install devkitppc',
+    CC             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-gcc',
+    CXX            = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-g++',
+    AS             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-as',
+    AR             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-ar',
+    EXT            = 'vita_arm',
+    SO             = '.so',
+    PLATFORM       = 'vita',
+    PLAT_INCDIR    = '',
+    PLAT_DEFS      = '-DVITA',
+    PLAT_CFLAGS    = '',
+    PLAT_CXXFLAGS  = '${PLAT_CFLAGS}',
+    PLAT_LDFLAGS   = '-shared -lm',
+    PLAT_LDXFLAGS  = '${PLAT_LDFLAGS}',
+    STATIC_LINKING = '1'
+  },
 }
 
 for plat, defs in pairs( platforms ) do
