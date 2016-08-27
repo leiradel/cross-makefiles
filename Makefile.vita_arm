@@ -34,6 +34,7 @@ AR  = $(VITASDK)/bin/arm-vita-eabi-ar
 
 OBJEXT = .vita_arm.o
 SOEXT  = .vita_arm.so
+LIBEXT = .vita_arm.a
 
 ################
 # Platform setup

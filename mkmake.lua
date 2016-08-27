@@ -35,6 +35,7 @@ AR  = ${AR}
 
 OBJEXT = .${EXT}.o
 SOEXT  = .${EXT}.${SO}
+LIBEXT = .${EXT}.a
 
 ################
 # Platform setup
