@@ -449,11 +449,11 @@ local platforms = {
   vita = {
     MAKEFILE       = 'Makefile.vita_arm',
     HOST           = 'Linux',
-    HEADERMSG      = 'Install devkitppc',
-    CC             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-gcc',
-    CXX            = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-g++',
-    AS             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-as',
-    AR             = '$(VITASDK_ROOT_DIR)/bin/arm-vita-eabi-ar',
+    HEADERMSG      = 'Install vitasdk',
+    CC             = '$(VITASDK)/bin/arm-vita-eabi-gcc',
+    CXX            = '$(VITASDK)/bin/arm-vita-eabi-g++',
+    AS             = '$(VITASDK)/bin/arm-vita-eabi-as',
+    AR             = '$(VITASDK)/bin/arm-vita-eabi-ar',
     EXT            = 'vita_arm',
     SO             = 'so',
     PLATFORM       = 'vita',
@@ -473,17 +473,17 @@ for plat, defs in pairs( platforms ) do
 
   defs.STATIC_LINKING = defs.STATIC_LINKING or '0'
   defs.TARGET_PLATFORM = defs.EXT
-  
+
   repeat
     equal = true
-    
+
     for def, value in pairs( defs ) do
       local templ2 = templ:gsub( '%${' .. def .. '}', ( value:gsub( '%%', '%%%%' ) ) )
       equal = equal and templ == templ2
       templ = templ2
     end
   until equal
-  
+
   local file = assert( io.open( defs.MAKEFILE, 'wb' ) )
   file:write( templ )
   file:close()
