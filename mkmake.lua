@@ -460,9 +460,9 @@ local platforms = {
     PLATFORM       = 'vita',
     PLAT_INCDIR    = '',
     PLAT_DEFS      = '-DVITA',
-    PLAT_CFLAGS    = '',
+    PLAT_CFLAGS    = '-ftree-vectorize -mfloat-abi=hard -ffast-math -fsingle-precision-constant -funroll-loops -fno-short-enums',
     PLAT_CXXFLAGS  = '${PLAT_CFLAGS}',
-    PLAT_LDFLAGS   = '-shared -lm',
+    PLAT_LDFLAGS   = '-shared -lm -mthumb -mcpu=cortex-a9 -mfloat-abi=hard',
     PLAT_LDXFLAGS  = '${PLAT_LDFLAGS}',
     STATIC_LINKING = '1'
   },
