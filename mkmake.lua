@@ -466,6 +466,26 @@ local platforms = {
     PLAT_LDXFLAGS  = '${PLAT_LDFLAGS}',
     STATIC_LINKING = '1'
   },
+  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  vita = {
+    MAKEFILE       = 'Makefile.ps3_ppc',
+    HOST           = 'Windows or Linux using Wine',
+    HEADERMSG      = 'Install CellSDK',
+    CC             = '$(CELL_SDK)/host-win32/ppu/bin/ppu-lv2-gcc',
+    CXX            = '$(CELL_SDK)/host-win32/ppu/bin/ppu-lv2-g++',
+    AS             = '$(CELL_SDK)/host-win32/ppu/bin/ppu-lv2-as',
+    AR             = '$(CELL_SDK)/host-win32/ppu/bin/ppu-lv2-ar',
+    EXT            = 'ps3_ppc',
+    SO             = 'so',
+    PLATFORM       = 'ps3',
+    PLAT_INCDIR    = '',
+    PLAT_DEFS      = '-D__CELLOS_LV2__',
+    PLAT_CFLAGS    = '-DMSB_FIRST -DWORDS_BIGENDIAN=1',
+    PLAT_CXXFLAGS  = '${PLAT_CFLAGS}',
+    PLAT_LDFLAGS   = '-shared -lm',
+    PLAT_LDXFLAGS  = '${PLAT_LDFLAGS}',
+    STATIC_LINKING = '1'
+  },
 }
 
 for plat, defs in pairs( platforms ) do
