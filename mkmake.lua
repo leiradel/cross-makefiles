@@ -165,76 +165,76 @@ local platforms = {
     MAKEFILE      = 'Makefile.android_armeabi-v7a',
     HOST          = 'Linux, Windows and Darwin',
     HEADERMSG     = 'Download the Android NDK, unpack somewhere, and set NDK_ROOT_DIR to it',
-    CC            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-gcc',
-    CXX           = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-g++',
-    AS            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-as',
-    AR            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-ar',
+    CC            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-gcc',
+    CXX           = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-g++',
+    AS            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-as',
+    AR            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-ar',
     EXT           = 'android_armeabi-v7a',
     SO            = 'so',
     PLATFORM      = 'android',
-    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-3/arch-arm/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/armeabi/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include/backward',
+    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-21/arch-arm/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include/backward',
     PLAT_DEFS     = '-DANDROID -DINLINE=inline -DHAVE_STDINT_H -DBSPF_UNIX -DHAVE_INTTYPES -DLSB_FIRST',
     PLAT_CFLAGS   = '-fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp -fomit-frame-pointer -fstrict-aliasing -funswitch-loops -finline-limit=300 -Wa,--noexecstack -Wformat -Werror=format-security',
     PLAT_CXXFLAGS = '${PLAT_CFLAGS} -fno-exceptions -fno-rtti',
-    PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-3/arch-arm -lgcc -no-canonical-prefixes -march=armv7-a -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
-    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/armeabi-v7a/thumb/libgnustl_static.a',
+    PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-21/arch-arm -lgcc -no-canonical-prefixes -march=armv7-a -Wl,--fix-cortex-a8 -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
+    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi-v7a/libgnustl_static.a',
   },
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   android_arm_v5te = {
     MAKEFILE      = 'Makefile.android_armeabi',
     HOST          = 'Linux, Windows and Darwin',
     HEADERMSG     = 'Download the Android NDK, unpack somewhere, and set NDK_ROOT_DIR to it',
-    CC            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-gcc',
-    CXX           = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-g++',
-    AS            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-as',
-    AR            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.8/prebuilt/' .. host .. '/bin/arm-linux-androideabi-ar',
+    CC            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-gcc',
+    CXX           = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-g++',
+    AS            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-as',
+    AR            = '$(NDK_ROOT_DIR)/toolchains/arm-linux-androideabi-4.9/prebuilt/' .. host .. '/bin/arm-linux-androideabi-ar',
     EXT           = 'android_armeabi',
     SO            = 'so',
     PLATFORM      = 'android',
-    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-3/arch-arm/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/armeabi/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include/backward',
+    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-9/arch-arm/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include/backward',
     PLAT_DEFS     = '-DANDROID -DINLINE=inline -DHAVE_STDINT_H -DBSPF_UNIX -DHAVE_INTTYPES -DLSB_FIRST',
     PLAT_CFLAGS   = '-fpic -ffunction-sections -funwind-tables -fstack-protector -no-canonical-prefixes -march=armv5te -mtune=xscale -msoft-float -fomit-frame-pointer -fstrict-aliasing -funswitch-loops -finline-limit=300 -Wa,--noexecstack -Wformat -Werror=format-security',
     PLAT_CXXFLAGS = '${PLAT_CFLAGS} -fno-exceptions -fno-rtti',
-    PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-3/arch-arm -lgcc -no-canonical-prefixes -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
-    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/armeabi/thumb/libgnustl_static.a',
+    PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-9/arch-arm -lgcc -no-canonical-prefixes -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
+    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/armeabi/libgnustl_static.a',
   },
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   android_x86 = {
     MAKEFILE      = 'Makefile.android_x86',
     HOST          = 'Linux, Windows and Darwin',
     HEADERMSG     = 'Download the Android NDK, unpack somewhere, and set NDK_ROOT_DIR to it',
-    CC            = '$(NDK_ROOT_DIR)/toolchains/x86-4.8/prebuilt/' .. host .. '/bin/i686-linux-android-gcc',
-    CXX           = '$(NDK_ROOT_DIR)/toolchains/x86-4.8/prebuilt/' .. host .. '/bin/i686-linux-android-g++',
-    AS            = '$(NDK_ROOT_DIR)/toolchains/x86-4.8/prebuilt/' .. host .. '/bin/i686-linux-android-as',
-    AR            = '$(NDK_ROOT_DIR)/toolchains/x86-4.8/prebuilt/' .. host .. '/bin/i686-linux-android-ar',
+    CC            = '$(NDK_ROOT_DIR)/toolchains/x86-4.9/prebuilt/' .. host .. '/bin/i686-linux-android-gcc',
+    CXX           = '$(NDK_ROOT_DIR)/toolchains/x86-4.9/prebuilt/' .. host .. '/bin/i686-linux-android-g++',
+    AS            = '$(NDK_ROOT_DIR)/toolchains/x86-4.9/prebuilt/' .. host .. '/bin/i686-linux-android-as',
+    AR            = '$(NDK_ROOT_DIR)/toolchains/x86-4.9/prebuilt/' .. host .. '/bin/i686-linux-android-ar',
     EXT           = 'android_x86',
     SO            = 'so',
     PLATFORM      = 'android',
-    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-9/arch-x86/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include/backward',
+    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-9/arch-x86/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include/backward',
     PLAT_DEFS     = '-DANDROID -DINLINE=inline -DHAVE_STDINT_H -DBSPF_UNIX -DHAVE_INTTYPES -DLSB_FIRST',
     PLAT_CFLAGS   = '-ffunction-sections -funwind-tables -no-canonical-prefixes -fstack-protector -fomit-frame-pointer -fstrict-aliasing -funswitch-loops -finline-limit=300 -Wa,--noexecstack -Wformat -Werror=format-security',
     PLAT_CXXFLAGS = '${PLAT_CFLAGS} -fno-exceptions -fno-rtti',
     PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-9/arch-x86 -lgcc -no-canonical-prefixes -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
-    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/x86/libgnustl_static.a',
+    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/x86/libgnustl_static.a',
   },
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   android_mips = {
     MAKEFILE      = 'Makefile.android_mips',
     HOST          = 'Linux, Windows and Darwin',
     HEADERMSG     = 'Download the Android NDK, unpack somewhere, and set NDK_ROOT_DIR to it',
-    CC            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.8/prebuilt/' .. host .. '/bin/mipsel-linux-android-gcc',
-    CXX           = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.8/prebuilt/' .. host .. '/bin/mipsel-linux-android-g++',
-    AS            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.8/prebuilt/' .. host .. '/bin/mipsel-linux-android-as',
-    AR            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.8/prebuilt/' .. host .. '/bin/mipsel-linux-android-ar',
+    CC            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.9/prebuilt/' .. host .. '/bin/mipsel-linux-android-gcc',
+    CXX           = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.9/prebuilt/' .. host .. '/bin/mipsel-linux-android-g++',
+    AS            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.9/prebuilt/' .. host .. '/bin/mipsel-linux-android-as',
+    AR            = '$(NDK_ROOT_DIR)/toolchains/mipsel-linux-android-4.9/prebuilt/' .. host .. '/bin/mipsel-linux-android-ar',
     EXT           = 'android_mips',
     SO            = 'so',
     PLATFORM      = 'android',
-    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-9/arch-mips/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/include/backward',
+    PLAT_INCDIR   = '-I$(NDK_ROOT_DIR)/platforms/android-9/arch-mips/usr/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/include -I$(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/include/backward',
     PLAT_DEFS     = '-DANDROID -DINLINE=inline -DHAVE_STDINT_H -DBSPF_UNIX -DHAVE_INTTYPES -DLSB_FIRST',
     PLAT_CFLAGS   = '-fpic -fno-strict-aliasing -finline-functions -ffunction-sections -funwind-tables -fmessage-length=0 -fno-inline-functions-called-once -fgcse-after-reload -frerun-cse-after-loop -frename-registers -no-canonical-prefixes -fomit-frame-pointer -funswitch-loops -finline-limit=300 -Wa,--noexecstack -Wformat -Werror=format-security',
     PLAT_CXXFLAGS = '${PLAT_CFLAGS} -fno-exceptions -fno-rtti',
     PLAT_LDFLAGS  = '-shared --sysroot=$(NDK_ROOT_DIR)/platforms/android-9/arch-mips -lgcc -no-canonical-prefixes -Wl,--no-undefined -Wl,-z,noexecstack -Wl,-z,relro -Wl,-z,now -lc -lm',
-    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.8/libs/mips/libgnustl_static.a',
+    PLAT_LDXFLAGS = '${PLAT_LDFLAGS} $(NDK_ROOT_DIR)/sources/cxx-stl/gnu-libstdc++/4.9/libs/mips/libgnustl_static.a',
   },
   -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   linux_x86 = {
@@ -510,9 +510,17 @@ for plat, defs in pairs( platforms ) do
   file:close()
 end
 
+local ordered = {}
+
+for _, defs in pairs( platforms ) do
+  ordered[ #ordered + 1 ] = defs
+end
+
+table.sort( ordered, function( e1, e2 ) return e1.EXT < e2.EXT end )
+
 local else_ = ''
 
-for plat, defs in pairs( platforms ) do
+for _, defs in ipairs( ordered ) do
   io.write( else_, 'ifeq ($(platform),', defs.EXT, ')\n' )
   io.write( 'include $(BUILD_DIR)/Makefile.', defs.EXT, '\n' )
   else_ = 'else '
